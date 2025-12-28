@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CleanArchProject.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,12 @@ namespace CleanArchProject.Domain.Interfaces
 {
     public interface ICategoryRepository
     {
+        IEnumerable<Category> GetAll ();
+        Category GetById (int id);
+        void Add(Category category);
+        void Update(Category category);
+        void Delete(int id);
+        bool DeleteAll();
 
     }
 }
